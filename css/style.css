@@ -10,26 +10,85 @@ body {
   background-color: #faf8f2;
 }
 
+/* 상단 영역 */
 header {
-  padding: 70px 20px;
-  text-align: center;
+  padding: 30px 20px;
   background-color: #5b3825;
   color: white;
 }
 
+.header-top {
+  max-width: 900px;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 header h1 {
-  font-size: 42px;
-  margin-bottom: 5px;
+  margin: 0;
+  font-size: 32px;
+}
+
+header p {
+  max-width: 900px;
+  margin: 5px auto 0;
+}
+
+/* 언어 선택 버튼 */
+.language-toggle {
+  display: flex;
+  gap: 5px;
+  padding: 4px;
+  background-color: #76543f;
+  border-radius: 8px;
+}
+
+.language-toggle button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.language-toggle button.active {
+  background-color: white;
+  color: #5b3825;
+  font-weight: bold;
+}
+
+/* 본문 */
+#behind-text span {
+  display: block;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+#behind-text span:last-child {
+  margin-bottom: 0;
+}
+
+#show-text span {
+  display: block;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+#show-text span:last-child {
+  margin-bottom: 0;
 }
 
 main {
-  max-width: 800px;
+  max-width: 900px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
 section {
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 h2 {
@@ -38,22 +97,25 @@ h2 {
   padding-bottom: 10px;
 }
 
-img {
+/* PDF 뷰어 */
+.pdf-container {
   width: 100%;
-  height: auto;
-  border-radius: 12px;
-  margin-top: 15px;
+  height: 700px;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-#download {
-  padding: 25px;
-  text-align: center;
-  background-color: #eee6d9;
-  border-radius: 12px;
+.pdf-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
-#download a {
-  display: inline-block;
+#download-btn {
+  display: table;
+  margin: 20px auto;
   padding: 12px 24px;
   background-color: #70452b;
   color: white;
@@ -68,12 +130,18 @@ footer {
   color: white;
 }
 
+/* 모바일 대응 */
 @media (max-width: 600px) {
   header h1 {
-    font-size: 32px;
+    font-size: 24px;
   }
 
-  main {
-    margin: 25px auto;
+  .language-toggle button {
+    padding: 7px 9px;
+    font-size: 12px;
+  }
+
+  .pdf-container {
+    height: 550px;
   }
 }
