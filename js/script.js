@@ -68,7 +68,7 @@ const translations = {
     downloadText: 'PDF 다운로드',
     footerText: '성공회대학교 어울림 김서영, 김지윤, 조유빈, 진다현',
 
-    pdf: 'files/pamphlet_kr.pdf',
+    pdf: './files/pamphlet_kr.pdf',
   },
 
   ja: {
@@ -92,7 +92,7 @@ const translations = {
     downloadText: 'PDFをダウンロード',
     footerText: '聖公会大学 オウルリム 김서영, 김지윤, 조유빈, 진다현',
 
-    pdf: 'files/pamphlet_ja.pdf',
+    pdf: './files/pamphlet_ja.pdf',
   },
 };
 
